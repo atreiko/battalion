@@ -1,0 +1,30 @@
+@import '../../index.scss';
+
+.battalion {
+  margin-top: 6rem;
+
+  &__text {
+    padding: 40px 0;
+
+    & p {
+      font-family: 'Overpass', sans-serif;
+      font-size: 19px;
+      text-align: center;
+      color: $color-black;
+      margin-bottom: 1.25em;
+
+      & > a {
+        color: #000;
+        font-weight: 600;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > svg {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}

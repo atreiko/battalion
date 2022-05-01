@@ -1,0 +1,15 @@
+export { default as p1 } from './01ma.webp';
+export { default as p2 } from './02ma.jpg';
+export { default as p3 } from './03ma.jpg';
+export { default as p4 } from './04ma.jpg';
+export { default as p5 } from './05ma.jpeg';
+export { default as p6 } from './06ma.jpg';
+export { default as p7 } from './07ma.jpg';
+export { default as p8 } from './08ma.webp';
+export { default as p9 } from './09ma.jpg';
+export { default as p10 } from './10ma.jpg';
+export { default as p11 } from './11ma.jpg';
+export { default as p12 } from './12ma.jpg';
+export { default as p13 } from './13ma.webp';
+export { default as p14 } from './14ma.jpeg';
+export { default as p15 } from './15ma.jpeg';

@@ -1,0 +1,68 @@
+@import '../../index.scss';
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin: 2rem 0;
+  height: 60px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+
+    // list-style-type: none;
+    // display: inline;
+    // font-size: 100%;
+    // margin: 0;
+    // padding: .5em;
+  }
+
+  &__number,
+  &__btn {
+    border: 1px solid $color-grey;
+    transition: all .4s ease;
+
+    & a {
+      transition: all .4s ease;
+    }
+
+    &:hover {
+      border-color: $color-secondary;
+      color: $color-secondary;
+      
+      & a {
+        color: $color-secondary;
+      }
+    }
+  }
+
+  &__number {
+    & a {
+      text-decoration: none;
+      color: $color-grey;
+      display: inline-block;
+      padding: .5rem 1rem;
+    }
+
+    &.pagination__active {
+      border-color: $color-primary;
+      & a {
+        // font-weight: bold;
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__btn {
+    color: $color-grey;
+    background-color: #fff;
+    padding: .5em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

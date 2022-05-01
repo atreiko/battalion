@@ -1,0 +1,21 @@
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+// ::-webkit-scrollbar {
+//   display: none;
+// }
+
+body {
+  font-family: Montserrat, sans-serif;
+  background-color: $color-white;
+  color: $color-black;
+  line-height: 1.7;
+}
+
+section {
+  margin-top: 6rem;
+}
+
+

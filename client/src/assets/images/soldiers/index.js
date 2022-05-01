@@ -1,0 +1,9 @@
+export { default as s1 } from './s1.jpeg';
+export { default as s2 } from './s2.jpeg';
+export { default as s3 } from './s3.jpeg';
+export { default as s4 } from './s4.jpeg';
+export { default as s5 } from './s5.jpeg';
+export { default as s6 } from './s6.jpeg';
+export { default as s7 } from './s7.jpeg';
+export { default as s8 } from './s8.jpeg';
+export { default as s9 } from './s9.jpeg';

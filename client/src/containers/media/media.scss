@@ -1,0 +1,55 @@
+@import '../../index.scss';
+
+.media {
+  background-color: rgba(205, 205, 205, 0.7);
+  border-bottom: solid .17em $color-primary;
+  padding: 6rem 0;
+
+  &__inner {
+    display: flex;
+
+    &-decorations {
+      flex-shrink: 0;
+      width: 180px;
+      position: relative;
+      border-right: 1px solid $color-grey;
+
+      &::before {
+        content: '';
+        background: url('../../assets/icons/left-quote.png');
+        background-repeat: no-repeat;
+        background-size: 150px;
+        width: 100%;
+        height: 150px;
+        position: absolute;
+        left: 0;
+        top: -1.3rem;
+      }
+    }
+
+    &-text {
+      margin-left: 2.5rem;
+      text-align: left;
+      font: 600 2.75em/1.333 "Overpass", sans-serif;
+      color: $color-grey;
+
+      & > svg {
+        justify-content: left;
+      }
+
+      h6 {
+        margin-top: 1.8rem;
+        font-size: 1.5rem;
+      }
+
+      p {
+        font: 400 1rem/1.625 "Overpass", sans-serif;
+        margin-top: 1rem;
+
+        & > a {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+}
