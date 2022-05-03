@@ -1,7 +1,7 @@
 import { Router } from 'express'
 import HomeRoute from './home'
 import SoldiersRoute from './soldiers'
-import ValorRoute from './valor'
+import ValorRoute from './valors'
 
 
 export default () => {

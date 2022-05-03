@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { ValorListController } from './valor.controller'
+import { ValorListController } from './valors.controller'
 
 const route = Router()
 

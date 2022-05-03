@@ -1,6 +1,12 @@
 import express from 'express'
 import apiRoutes from '../api'
 import cors from 'cors'
+import bodyParser from 'body-parser'
+
+const allowedOrigins = [
+	'http://localhost:3000',
+	'https://my-lovely-site.com'
+];
 
 export default ({config}) => {
   const app = express()
@@ -23,6 +29,8 @@ export default ({config}) => {
 		},
 		credentials: true
 	}));
+
+  app.use(bodyParser.json())
   
   // load api routes
   app.use(`/api/v${config.VERSION}`, apiRoutes())
