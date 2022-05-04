@@ -1,4 +1,4 @@
-import ValorModel from "../models/valors.model"
+import ValorModel from '../models/valors.model'
 
 export const CreateValor = async ({
   title,
@@ -6,6 +6,7 @@ export const CreateValor = async ({
   description,
   path,
 }) => {
+
   const valor = await ValorModel.create({
     title,
     image,

@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
 export default async function({config}) {
+  
   const connection = await mongoose
     .connect(
       config.MONGODB_URI, {

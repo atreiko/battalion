@@ -1,9 +1,18 @@
 import { Router } from 'express'
-import { IndexController } from './index.controller'
+import { 
+  HomePostsListController,
+  CreateHomePostController,
+  HomePostByIdController,
+  DeleteHomePostByIdController
+} from './home-posts.controller'
 
 const route = Router()
 
 export default function(root) {
   root.use('/', route)
-  route.get('/', IndexController)
+  route.get('/', HomePostsListController)
+  route.post('/', CreateHomePostController)
+  route.get('/:homePostId', HomePostByIdController)
+  route.delete('/:homePostId', DeleteHomePostByIdController)
 }
+

@@ -1,19 +1,36 @@
 import SoldierModel from "../models/soldier.model"
 
-export const CreateSoldier = async ({
-  title,
-  image,
-  description,
-  path,
+/**
+ * @desc Create product
+ * @return {Promise}
+ **/
+export const createSoldier = async ({
+  title, image, rank,
 }) => {
-  const soldier = await SoldierModel.create({
+  return SoldierModel.create({
     title,
     image,
-    description,
-    path,
+    rank,
   })
-
-  return {
-    soldier: soldier
-  }
 }
+
+/**
+ * @desc Retrieve soldiers list
+ **/
+export const getSoldiers = async ({
+  offset = 0,
+  limit = 9
+}) => SoldierModel.find({}, null, {
+  skip: parseInt(offset),
+  limit: parseInt(limit)
+})
+
+/**
+ * @desc Search soldier by Id
+ **/
+export const getSoldierById = async id => SoldierModel.findById(id)
+
+/**
+ * @desc Delete soldier by ID
+ **/
+export const deleteSoldierById = async id => SoldierModel.findByIdAndDelete(id)

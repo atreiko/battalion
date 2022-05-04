@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const HomePost = new mongoose.Schema({
+const HomePostModel = new mongoose.Schema({
   title: {
     type: String, 
     required: true
@@ -31,7 +31,7 @@ const HomePost = new mongoose.Schema({
   },
 })
 
-export default mongoose.model('HomePost', HomePost)
+export default mongoose.model('HomePostModel', HomePostModel)
 
 // image:
 // {

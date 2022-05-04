@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const Soldier = new mongoose.Schema({
+const SoldierModel = new mongoose.Schema({
   title: {
     type: String, 
     required: true
@@ -9,7 +9,7 @@ const Soldier = new mongoose.Schema({
     type: String, 
     required: true
   },
-  description: {
+  rank: {
     type: String, 
     required: true
   },
@@ -27,4 +27,4 @@ const Soldier = new mongoose.Schema({
   },
 })
 
-export default mongoose.model('Soldier', Soldier)
+export default mongoose.model('SoldierModel', SoldierModel)
