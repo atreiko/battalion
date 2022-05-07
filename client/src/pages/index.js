@@ -1,6 +1,6 @@
 export { default as Home }     from './Home.jsx'
 export { default as Soldiers } from './Soldiers.jsx'
-export { default as Valor }    from './Valor.jsx'
+export { default as Valors }   from './Valors.jsx'
 export { default as Photos }   from './Photos.jsx'
 // export { default as Videos } from './Videos.jsx'
 // export { default as Soldier } from './Soldier.jsx'

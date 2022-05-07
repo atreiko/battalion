@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const HomePostModel = new mongoose.Schema({
+const HomePost = new mongoose.Schema({
   title: {
     type: String, 
     required: true
@@ -20,7 +20,7 @@ const HomePostModel = new mongoose.Schema({
   status: {
     type: String, 
     default: '1'
-},
+  },
   created_at: {
     type: Date, 
     default: new Date()
@@ -31,7 +31,7 @@ const HomePostModel = new mongoose.Schema({
   },
 })
 
-export default mongoose.model('HomePostModel', HomePostModel)
+export default mongoose.model('HomePost', HomePost)
 
 // image:
 // {

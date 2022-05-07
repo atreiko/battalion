@@ -1,11 +1,9 @@
-// import data from '../../data';
-
 import { 
   createHomePost, 
   deleteHomePostById, 
   getHomePostById, 
   getHomePosts 
-} from '../../services/home-post.service';
+} from '../../services/home-posts.service';
 
 import { 
   HomePostMapper, 
@@ -38,10 +36,10 @@ export const HomePostsListController = async (request, response, next) => {
   }
 
 	return response
-		.status(201) //? 201?
+		.status(200)
 		.json({
 			success: true,
-			homePosts: homePosts
+			data
 		});
 }
 
@@ -86,6 +84,7 @@ export const CreateHomePostController = async (request, response, next) => {
  * @desc Find home-post by ID
  **/
 export const HomePostByIdController = async (request, response, next) => {
+  
   try {
     const { homePostId } = request.params
     const homePost = await getHomePostById(homePostId)

@@ -165,109 +165,145 @@ const data = {
       _id: 1,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s1.jpeg'
+      image: '/images/valor/s1.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 2,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s2.jpeg'
+      image: '/images/valor/s2.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 3,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s3.jpeg'
+      image: '/images/valor/s3.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 4,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s4.jpeg'
+      image: '/images/valor/s4.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 5,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s5.jpeg'
+      image: '/images/valor/s5.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 6,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s6.jpeg'
+      image: '/images/valor/s6.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 7,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s7.jpeg'
+      image: '/images/valor/s7.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 8,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s8.jpeg'
+      image: '/images/valor/s8.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 9,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s9.jpeg'
+      image: '/images/valor/s9.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 10,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s10.jpeg'
+      image: '/images/valor/s10.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 11,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s11.jpeg'
+      image: '/images/valor/s11.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 12,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s12.jpeg'
+      image: '/images/valor/s12.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 13,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/soldiers/s13.jpeg'
+      image: '/images/soldiers/s13.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 14,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s14.jpeg'
+      image: '/images/valor/s14.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 15,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s15.webp'
+      image: '/images/valor/s15.webp',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 16,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s16.jpeg'
+      image: '/images/valor/s16.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 17,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s17.jpeg'
+      image: '/images/valor/s17.jpeg',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
     {
       _id: 18,
       title: 'Жовтобрюх Тарас',
       rank: 'Сержант 1-го окремого батальйону морської піхоти',
-      image: '/images/valor/s18.webp'
+      image: '/images/valor/s18.webp',
+      description: 'valor descriptions',
+      rip: '23.06.1969 - 03.04.2022'
     },
   ],
   photos: [

@@ -19,23 +19,3 @@ import config from './config'
   })
 })() 
 
-
-// const app = express()
-// app.use(cors())
-
-// app.get('/api/', (res, req) => {
-//   req.json(data.homeImages)
-// })
-
-// app.get('/api/soldiers/', (res, req) => {
-//   req.json(data.soldiers)
-// })
-
-// app.get('/api/valor/', (res, req) => {
-//   req.json(data.valor)
-// })
-
-// app.get('/api/photos/', (res, req) => {
-//   req.json(data.photos)
-// })
-

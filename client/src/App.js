@@ -7,7 +7,7 @@ import {
   Photos,
   Soldier,
   Soldiers,
-  Valor,
+  Valors,
   Videos
 } from './pages';
 
@@ -23,7 +23,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='soldiers' element={<Soldiers />} />
           {/* <Route path='soldiers/:id' element={<Soldier />} /> */}
-          <Route path='valor' element={<Valor />} />
+          <Route path='valors' element={<Valors />} />
           <Route path='photos' element={<Photos />} />
           {/* <Route path='videos' element={<Videos />} /> */}
           {/* <Route path='*' element={<Page404 />} />  */}

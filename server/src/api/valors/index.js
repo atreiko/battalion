@@ -1,9 +1,17 @@
 import { Router } from 'express'
-import { ValorListController } from './valors.controller'
+import { 
+  CreateValorController, 
+  DeleteValorByIdController, 
+  ValorByIdController, 
+  ValorsListController 
+} from './valors.controller'
 
 const route = Router()
 
 export default function(root) {
-  root.use('/valor', route)
-  route.get('/', ValorListController)
+  root.use('/valors', route)
+  route.get('/', ValorsListController)
+  route.post('/', CreateValorController)
+  route.get('/:valorId', ValorByIdController)
+  route.delete('/:valorId', DeleteValorByIdController)
 }

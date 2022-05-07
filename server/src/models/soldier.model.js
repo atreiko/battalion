@@ -1,30 +1,30 @@
 import mongoose from 'mongoose'
 
-const SoldierModel = new mongoose.Schema({
+const Soldier = new mongoose.Schema({
   title: {
-    type: String, 
+    type: String,
     required: true
   },
   image: {
-    type: String, 
+    type: String,
     required: true
   },
   rank: {
-    type: String, 
+    type: String,
     required: true
   },
   status: {
-    type: String, 
+    type: String,
     default: '1'
-},
+  },
   created_at: {
-    type: Date, 
+    type: Date,
     default: new Date()
   },
   updated_at: {
-    type: Date, 
+    type: Date,
     default: new Date()
-  },
+  }
 })
 
-export default mongoose.model('SoldierModel', SoldierModel)
+export default mongoose.model('Soldier', Soldier)

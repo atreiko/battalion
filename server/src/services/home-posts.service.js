@@ -1,17 +1,14 @@
-import HomePostModel from '../models/home-post.model'
+import HomePost from '../models/home-post.model'
 
 /**
  * @desc Create home-post
  * @return {Promise}
  **/
 export const createHomePost = async ({
-  title,
-  image,
-  description,
-  path,
+  title, image, description, path,
 }) => {
 
-  return HomePostModel.create({
+  return HomePost.create({
     title,
     image,
     description,
@@ -25,7 +22,7 @@ export const createHomePost = async ({
 export const getHomePosts = async ({
   offset = 0,
   limit = 7
-}) => HomePostModel.find({}, null, {
+}) => HomePost.find({}, null, {
   skip: parseInt(offset),
   limit: parseInt(limit)
 })
@@ -33,10 +30,11 @@ export const getHomePosts = async ({
 /**
  * @desc Search soldier by Id
  **/
-export const getHomePostById = async id => HomePostModel.findById(id)
+export const getHomePostById = async id => HomePost.findById(id)
 
 /**
  * @desc Delete home-post by ID
  **/
-export const deleteHomePostById = async id => HomePostModel.findByIdAndDelete(id)
+export const deleteHomePostById = async id => HomePost.findByIdAndDelete(id)
+
 

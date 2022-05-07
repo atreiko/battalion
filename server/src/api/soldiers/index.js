@@ -14,4 +14,6 @@ export default function(root) {
   route.post('/', CreateSoldierController)
   route.get('/:soldierId', SoldierByIdController)
   route.delete('/:soldierId', DeleteSoldierByIdController)
-} 
+}
+  
+

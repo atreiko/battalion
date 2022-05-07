@@ -28,7 +28,7 @@ export const SoldiersListController = async (request, response, next) => {
       .json({
         status: true,
         soldiers: Array.isArray(soldiers) 
-          ? soldiers.map(soldier =>  SoldiersListItemMapper(soldier))
+          ? soldiers?.map(soldier =>  SoldiersListItemMapper(soldier))
           : []
       })
   } catch (error) {
@@ -53,17 +53,13 @@ export const SoldiersListController = async (request, response, next) => {
 export const CreateSoldierController = async (request, response, next) => {
 
   try {
-    const {
-      title,
-      rank,
-      image
-    } = request.body
+    const { title, rank, image } = request.body
 
     const soldier = SoldierMapper(
       await createSoldier({
         title,
-        rank,
-        image
+        image,
+        rank
       })
     )
 

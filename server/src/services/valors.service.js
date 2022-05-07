@@ -1,20 +1,39 @@
-import ValorModel from '../models/valors.model'
+import Valor from '../models/valor.model'
 
-export const CreateValor = async ({
-  title,
-  image,
-  description,
-  path,
+/**
+ * @desc Create product
+ * @return {Promise}
+ **/
+export const createValor = async ({
+  title, image, description, rank, rip
 }) => {
 
-  const valor = await ValorModel.create({
+  return Valor.create({
     title,
     image,
     description,
-    path,
+    rank,
+    rip
   })
-
-  return {
-    valor: valor
-  }
 }
+
+/**
+ * @desc Retrieve valors list
+ **/
+export const getValors = async ({
+  offset = 0,
+  limit = 9
+}) => Valor.find({}, null, {
+  skip: parseInt(offset),
+  limit: parseInt(limit)
+})
+
+/**
+ * @desc Search valor by Id
+ **/
+export const getValorById = async id => Valor.findById(id)
+
+/**
+ * @desc Delete valor by ID
+ **/
+export const deleteValorById = async id => Valor.findByIdAndDelete(id)

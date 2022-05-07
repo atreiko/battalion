@@ -7,7 +7,7 @@ import Loader from '../components/loader/Loader'
 import PostService from '../api/PostService'
 import { useFetching } from '../hooks/useFetching'
 
-const Valor = () => {
+const Valors = () => {
   const [ cards, setCards ] = useState([])
   const [ fetchCards, cardsLoading, cardsError ] = useFetching(async () => {
     const items = await PostService.getValorPosts()
@@ -67,4 +67,4 @@ const Valor = () => {
   )
 }
 
-export default Valor
+export default Valors

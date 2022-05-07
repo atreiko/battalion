@@ -13,7 +13,7 @@ export default class PostService {
   }
 
   static async getValorPosts() {
-    const response = await axios.get('/api/valor')
+    const response = await axios.get('/api/valors')
     return response.data
   }
 

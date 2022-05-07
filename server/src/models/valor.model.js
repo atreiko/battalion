@@ -13,6 +13,14 @@ const Valor = new mongoose.Schema({
     type: String, 
     required: true
   },
+  rank: {
+    type: String,
+    required: true
+  },
+  rip: {
+    type: String,
+    required: true
+  },
   status: {
     type: String, 
     default: '1'
