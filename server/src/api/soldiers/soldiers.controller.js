@@ -1,46 +1,98 @@
-import { 
-  createSoldier, 
-  deleteSoldierById, 
-  getSoldierById, 
-  getSoldiers 
+import {
+	getSoldiers,
+	createSoldier,
+	getSoldierById,
+	deleteSoldierById,
 } from '../../services/soldiers.service';
-
-import { 
-  SoldiersListItemMapper, 
-  SoldierMapper 
+import {
+	SoldierMapper,
+	SoldierListItemMapper
 } from './soldiers.mapper';
 
 /**
- * @return List of soldiers
+ * @desc Delete soldier by ID
+ **/
+export const DeleteSoldierByIdController = async (request, response, next) => {
+	try {
+		const {soldierId} = request.params;
+		const soldier = await deleteSoldierById(soldierId);
+
+		if (!soldier) {
+			throw new Error('Soldier not found');
+		}
+
+		response
+			.status(200)
+			.json({
+				status: true,
+				soldier: SoldierMapper(soldier)
+			})
+
+	} catch(e) {
+		next(e);
+	}
+}
+
+/**
+ * @desc Find soldier by ID
+ **/
+export const SoldierByIdController = async (request, response, next) => {
+	try {
+		const {soldierId} = request.params;
+		const soldier = await getSoldierById(soldierId);
+
+		if (!soldier) {
+			throw new Error('Soldier not found.');
+		}
+
+		return response
+			.status(200)
+			.json({
+				status: true,
+				soldier: SoldierMapper(soldier)
+			})
+
+	} catch (e) {
+		next(e)
+	}
+}
+
+/**
+ * @return soldiers list
  **/
 export const SoldiersListController = async (request, response, next) => {
 
-  try {
-    const { offset, limit } = request.query
+	try {
+		const {
+			offset = 0,
+			limit = 10
+		} = request.query;
 
-    const soldiers = await getSoldiers({
-      offset,
-      limit
-    })
+		const soldiers = await getSoldiers({
+			offset,
+			limit
+		});
 
-    return response
-      .status(200)
-      .json({
-        status: true,
-        soldiers: Array.isArray(soldiers) 
-          ? soldiers.map(soldier => SoldiersListItemMapper(soldier)) 
-          : []
-      })
-  } catch (error) {
-    next(error)
-  }
+		response
+			.status(200)
+			.json({
+				status: true,
+				soldiers: Array.isArray(soldiers)
+					? soldiers
+						.map(soldier => SoldierListItemMapper(soldier))
+					: []
+			})
 
-  return response
-    .status(200)
-    .json({
-      success: true,
-      data
-    })
+	} catch (e) {
+		next(e)
+	}
+
+	response
+		.status(200)
+		.json({
+			success: true,
+			data
+		})
 }
 
 /**
@@ -51,73 +103,29 @@ export const SoldiersListController = async (request, response, next) => {
  * @return {Promise}
  **/
 export const CreateSoldierController = async (request, response, next) => {
+	try {
+		const {
+			title,
+			image,
+			rank,
+		} = request.body;
 
-  try {
-    const { title, rank, image } = request.body
+		const solider = SoldierMapper(
+			await createSoldier({
+				title,
+				image,
+				rank,
+			})
+		);
 
-    const soldier = SoldierMapper(
-      await createSoldier({
-        title,
-        image,
-        rank
-      })
-    )
+		return response
+			.status(201)
+			.json({
+				status: true,
+				solider
+			})
 
-    return response
-      .status(201)
-      .json({
-        status: true,
-        soldier
-      })
-  } catch (error) {
-    next(error)
-  }
-}
-
-/**
- * @desc Find soldier by ID
- **/
-export const SoldierByIdController = async (request, response, next) => {
-
-  try {
-    const { soldierId } = request.params
-    const soldier = await getSoldierById(soldierId)
-
-    if (!soldier) {
-      throw new Error('Soldier not found.')
-    }
-
-    return response
-      .status(200)
-      .json({
-        status: true,
-        soldier: SoldierMapper(soldier)
-      })
-  } catch (error) {
-    next(error)
-  }
-}
-
-/**
- * @desc Delete soldier by ID
- **/
-export const DeleteSoldierByIdController = async (request, response, next) => {
-
-  try {
-    const { soldierId } = request.params
-    const soldier = await deleteSoldierById(soldierId)
-
-    if (!soldier) {
-      throw new Error('Soldier not found.')
-    }
-
-    return response
-      .status(200)
-      .json({
-        status: true,
-        soldier: SoldierMapper(soldier)
-      })
-  } catch (error) {
-    next(error)
-  }
+	} catch (e) {
+		next(e);
+	}
 }
