@@ -12,7 +12,7 @@ const Soldier = new mongoose.Schema({
   rank: {
     type: String,
     required: true
-  },
+  }, 
   status: {
     type: String,
     default: '1'

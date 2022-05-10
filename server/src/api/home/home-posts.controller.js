@@ -27,14 +27,14 @@ export const HomePostsListController = async (request, response, next) => {
       .status(200)
       .json({
         status: true,
-        homePosts: Array.isArray(homePosts)
+        data: Array.isArray(homePosts)
         ? homePosts.map(post => HomePostsListMapper(post))
         : []
       })
   } catch (error) {
     next(error)
   }
-
+  
 	return response
 		.status(200)
 		.json({
@@ -84,7 +84,7 @@ export const CreateHomePostController = async (request, response, next) => {
  * @desc Find home-post by ID
  **/
 export const HomePostByIdController = async (request, response, next) => {
-  
+
   try {
     const { homePostId } = request.params
     const homePost = await getHomePostById(homePostId)
@@ -105,7 +105,7 @@ export const HomePostByIdController = async (request, response, next) => {
 }
 
 /**
- * @desc Delete soldier by ID
+ * @desc Delete home-post  by ID
  **/
 export const DeleteHomePostByIdController = async (request, response, next) => {
 

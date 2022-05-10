@@ -1,4 +1,4 @@
-import { addCreationAndUpdatingDate } from "../../utils/entities";
+import { addCreationAndUpdatingDate } from '../../utils/entities';
 
 export const HomePostsListMapper = post => ({
   id: post._id,

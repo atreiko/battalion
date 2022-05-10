@@ -4,7 +4,7 @@ import cors from 'cors'
 import bodyParser from 'body-parser'
 
 const allowedOrigins = [
-	'http://localhost:3000',
+	'http://localhost:3005',
 	'https://my-lovely-site.com'
 ];
 
@@ -18,7 +18,7 @@ export default ({config}) => {
 			if (!origin) {
 				return callback(null, true);
 			}
-
+      
 			if (allowedOrigins.indexOf(origin) === -1) {
 				const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
 

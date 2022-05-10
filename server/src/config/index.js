@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 const environment = dotenv.config()
 
 if (!environment) {
-  throw new Error('.env can not be found')
+  throw new Error('.env can not be found.')
 }
 
 export default {

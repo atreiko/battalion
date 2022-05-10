@@ -8,7 +8,7 @@ import {
 import { 
   SoldiersListItemMapper, 
   SoldierMapper 
-} from './soldier.mapper';
+} from './soldiers.mapper';
 
 /**
  * @return List of soldiers
@@ -28,7 +28,7 @@ export const SoldiersListController = async (request, response, next) => {
       .json({
         status: true,
         soldiers: Array.isArray(soldiers) 
-          ? soldiers?.map(soldier =>  SoldiersListItemMapper(soldier))
+          ? soldiers.map(soldier => SoldiersListItemMapper(soldier)) 
           : []
       })
   } catch (error) {

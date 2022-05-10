@@ -16,13 +16,15 @@ const Mosaic = () => {
     fetchPosts()
   }, []) 
 
+  console.log(posts);
+
   return (
     <div className='mosaic'>
       <ul className='mosaic__list'>
         {
           posts.data?.slice(0, 7).map((post, index) => (
             <li 
-              key={post._id} 
+              key={post.id} 
               className={`mosaic__list-item item__row-2 ${`item__${index + 1}`}`
             }>
               <Link to={post.path}>
