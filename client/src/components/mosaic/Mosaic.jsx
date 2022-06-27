@@ -16,8 +16,6 @@ const Mosaic = () => {
     fetchPosts()
   }, []) 
 
-  console.log(posts);
-
   return (
     <div className='mosaic'>
       <ul className='mosaic__list'>

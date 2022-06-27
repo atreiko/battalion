@@ -15,3 +15,4 @@ export default function(root) {
   route.get('/:valorId', ValorByIdController)
   route.delete('/:valorId', DeleteValorByIdController)
 }
+

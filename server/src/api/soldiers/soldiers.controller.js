@@ -17,7 +17,7 @@ export const SoldiersListController = async (request, response, next) => {
 
   try {
     const { offset, limit } = request.query
-
+    
     const soldiers = await getSoldiers({
       offset,
       limit
@@ -27,8 +27,8 @@ export const SoldiersListController = async (request, response, next) => {
       .status(200)
       .json({
         status: true,
-        soldiers: Array.isArray(soldiers) 
-          ? soldiers.map(soldier => SoldiersListItemMapper(soldier)) 
+        data: Array.isArray(soldiers) 
+          ? soldiers?.map(soldier => SoldiersListItemMapper(soldier)) 
           : []
       })
   } catch (error) {

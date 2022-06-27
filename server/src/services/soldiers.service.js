@@ -21,10 +21,10 @@ export const createSoldier = async ({
 export const getSoldiers = async ({
   offset = 0,
   limit = 9
-  }) => Soldier.find({}, null, {
-    skip: parseInt(offset),
-    limit: parseInt(limit)
-  })
+}) => Soldier.find({}, null, {
+  skip: parseInt(offset),
+  limit: parseInt(limit)
+})
 
 /**
  * @desc Search soldier by Id

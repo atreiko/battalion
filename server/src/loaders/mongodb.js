@@ -11,3 +11,4 @@ export default async function({config}) {
       })
       return connection.connection.db
 }
+

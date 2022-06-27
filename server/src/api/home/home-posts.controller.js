@@ -114,7 +114,7 @@ export const DeleteHomePostByIdController = async (request, response, next) => {
     const homePost = await deleteHomePostById(homePostId)
 
     if (!homePost) {
-      throw new Error('Home post not found')
+      throw new Error('Home post not found.')
     }
 
     return response

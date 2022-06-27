@@ -24,7 +24,7 @@ const Soldiers = () => {
   const nextPage = () => setCurrentPage(prev => prev + 1)
   const prevPage = () => setCurrentPage(prev => prev - 1)
 
-    useEffect(() => {
+  useEffect(() => {
       fetchCards()
   }, [])
 

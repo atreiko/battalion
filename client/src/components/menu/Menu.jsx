@@ -13,7 +13,7 @@ const Menu = ({ isOpen, setIsOpen }) => {
           <div className='menu__item-links'>
             <Link onClick={ () => setIsOpen() } className='menu__item-link' to='/'>Опис</Link>
             <Link onClick={ () => setIsOpen() } className='menu__item-link' to='/soldiers'>Наші військові</Link>
-            <Link onClick={ () => setIsOpen() } className='menu__item-link' to='/valor'>Вічна пам'ять</Link>
+            <Link onClick={ () => setIsOpen() } className='menu__item-link' to='/valors'>Вічна пам'ять</Link>
           </div>
         </li>
         <li className='menu__item'>

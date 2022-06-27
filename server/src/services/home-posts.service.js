@@ -28,7 +28,7 @@ export const getHomePosts = async ({
 })
 
 /**
- * @desc Search soldier by Id
+ * @desc Search home-post by Id
  **/
 export const getHomePostById = async id => HomePost.findById(id)
 

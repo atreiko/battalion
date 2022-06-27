@@ -15,4 +15,3 @@ export default function(root) {
   route.get('/:homePostId', HomePostByIdController)
   route.delete('/:homePostId', DeleteHomePostByIdController)
 }
-

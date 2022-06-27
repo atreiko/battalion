@@ -36,7 +36,7 @@ const Pagination = ({
                   className="pagination__link"
                   onClick={() => paginate(number)}
                   >
-                    { number }
+                    { number } 
                   </a>
                 </li>
               ))
